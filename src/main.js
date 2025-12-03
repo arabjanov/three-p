@@ -5,8 +5,8 @@ import gsap from "gsap";
 // scene and camera
 const scene = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.01, 100);
-camera.position.z = 8;
-camera.position.y = 5;
+camera.position.z = 7;
+camera.position.y = 6;
 camera.position.x = -4;
 
 // renderer
@@ -187,257 +187,355 @@ const updateMaterial = new THREE.MeshStandardMaterial({color: "yellow",emissive:
 const updateMaterial2 = new THREE.MeshStandardMaterial({color: "yellow",emissive: "white", emissiveIntensity: 0});
 
 const boxGeometry = new THREE.BoxGeometry();
-const box = new THREE.Mesh(boxGeometry,originalMaterial);
-box.position.set( -1.5, +0.5, +1.5 );
+const box = new THREE.Mesh( boxGeometry, originalMaterial );
+box.position.set( -1, +1.5, +1 );
 scene.add(box)
 
 const boxtwo = new THREE.BoxGeometry();
-const box2 = new THREE.Mesh(boxtwo, originalMaterial);
-box2.position.set( -0.5, +0.5, +1.5 );
+const box2 = new THREE.Mesh( boxtwo, originalMaterial );
+box2.position.set( 0, +1.5, +1 );
 scene.add(box2);
 
 const boxthree = new THREE.BoxGeometry();
-const box3 = new THREE.Mesh(boxthree, originalMaterial);
-box3.position.set( +0.5, +0.5, +1.5 );
+const box3 = new THREE.Mesh( boxthree, originalMaterial );
+box3.position.set( +1, +1.5, +1 );
 scene.add(box3);
 
 const boxfour = new THREE.BoxGeometry();
-const box4 = new THREE.Mesh(boxfour, originalMaterial);
-box4.position.set( +1.5, +0.5, +1.5 );
-scene.add(box4);
+const box4 = new THREE.Mesh( boxfour, originalMaterial );
+box4.position.set( +1, +1.5, 0 );
+scene.add( box4 )
 
 const boxfive = new THREE.BoxGeometry();
-const box5 = new THREE.Mesh(boxfive, originalMaterial);
-box5.position.set( +1.5, +0.5, +0.5 );
-scene.add(box5);
+const box5 = new THREE.Mesh( boxfive, originalMaterial );
+box5.position.set( +1, +1.5, -1 );
+scene.add( box5 )
 
 const boxsix = new THREE.BoxGeometry();
-const box6 = new THREE.Mesh(boxsix, originalMaterial);
-box6.position.set( +1.5, +0.5, -0.5 );
-scene.add(box6);
+const box6 = new THREE.Mesh( boxsix, originalMaterial );
+box6.position.set( 0, +1.5, -1 );
+scene.add( box6 )
 
 const boxseven = new THREE.BoxGeometry();
-const box7 = new THREE.Mesh(boxseven, originalMaterial);
-box7.position.set( +1.5, +0.5, -1.5 );
+const box7 = new THREE.Mesh( boxseven, originalMaterial );
+box7.position.set( -1, +1.5, -1 );
 scene.add(box7);
 
 const boxeight = new THREE.BoxGeometry();
-const box8 = new THREE.Mesh(boxeight, originalMaterial);
-box8.position.set( +0.5, +0.5, -1.5 );
+const box8 = new THREE.Mesh( boxeight, originalMaterial );
+box8.position.set( -1, +1.5, 0 );
 scene.add(box8);
 
 const boxnine = new THREE.BoxGeometry();
-const box9 = new THREE.Mesh(boxnine, originalMaterial);
-box9.position.set( -0.5, +0.5, -1.5 );
+const box9 = new THREE.Mesh( boxnine, originalMaterial );
+box9.position.set( 0, +1.5, 0 );
 scene.add(box9);
-
-const boxten = new THREE.BoxGeometry();
-const box10 = new THREE.Mesh(boxten, originalMaterial);
-box10.position.set( -1.5, +0.5, -1.5 );
-scene.add(box10);
-
-const boxeleven = new THREE.BoxGeometry();
-const box11 = new THREE.Mesh(boxeleven, originalMaterial);
-box11.position.set( -1.5, +0.5, -0.5 );
-scene.add(box11);
-
-const boxtwelve = new THREE.BoxGeometry();
-const box12 = new THREE.Mesh(boxtwelve, originalMaterial);
-box12.position.set( -1.5, +0.5, +0.5 );
-scene.add(box12);
 
 // main box
 const boxfGeometry = new THREE.BoxGeometry();
-const boxf = new THREE.Mesh(boxfGeometry,originalMaterial);
-boxf.position.set( -1.5, +1.5, +1.5 );
+const boxf = new THREE.Mesh( boxfGeometry, originalMaterial );
+boxf.position.set( -1, +2.5, +1 );
 scene.add(boxf)
 
 const boxtwof = new THREE.BoxGeometry();
-const box2f = new THREE.Mesh(boxtwof, originalMaterial);
-box2f.position.set( -0.5, +1.5, +1.5 );
+const box2f = new THREE.Mesh( boxtwof, originalMaterial) ;
+box2f.position.set( 0, +2.5, +1 );
 scene.add(box2f);
 
 const boxthreef = new THREE.BoxGeometry();
-const box3f = new THREE.Mesh(boxthreef, originalMaterial);
-box3f.position.set( +0.5, +1.5, +1.5 );
+const box3f = new THREE.Mesh( boxthreef, originalMaterial );
+box3f.position.set( +1, +2.5, +1 );
 scene.add(box3f);
 
 const boxfourf = new THREE.BoxGeometry();
-const box4f = new THREE.Mesh(boxfourf, originalMaterial);
-box4f.position.set( +1.5, +1.5, +1.5 );
+const box4f = new THREE.Mesh( boxfourf, originalMaterial );
+box4f.position.set( +1, +2.5, 0 );
 scene.add(box4f);
 
 const boxfivef = new THREE.BoxGeometry();
-const box5f = new THREE.Mesh(boxfivef, originalMaterial);
-box5f.position.set( +1.5, +1.5, +0.5 );
+const box5f = new THREE.Mesh( boxfivef, originalMaterial );
+box5f.position.set( +1, +2.5, -1 );
 scene.add(box5f);
 
 const boxsixf = new THREE.BoxGeometry();
-const box6f = new THREE.Mesh(boxsixf, originalMaterial);
-box6f.position.set( +1.5, +1.5, -0.5 );
+const box6f = new THREE.Mesh( boxsixf, originalMaterial );
+box6f.position.set( 0, +2.5, -1 );
 scene.add(box6f);
 
 const boxsevenf = new THREE.BoxGeometry();
 const box7f = new THREE.Mesh(boxsevenf, originalMaterial);
-box7f.position.set( +1.5, +1.5, -1.5 );
+box7f.position.set( -1, +2.5, -1 );
 scene.add(box7f);
 
 const boxeightf = new THREE.BoxGeometry();
 const box8f = new THREE.Mesh(boxeightf, originalMaterial);
-box8f.position.set( +0.5, +1.5, -1.5 );
+box8f.position.set( -1, +2.5, 0 );
 scene.add(box8f);
-
-const boxninef = new THREE.BoxGeometry();
-const box9f = new THREE.Mesh(boxninef, originalMaterial);
-box9f.position.set( -0.5, +1.5, -1.5 );
-scene.add(box9f);
-
-const boxtenf = new THREE.BoxGeometry();
-const box10f = new THREE.Mesh(boxtenf, originalMaterial);
-box10f.position.set( -1.5, +1.5, -1.5 );
-scene.add(box10f);
-
-const boxelevenf = new THREE.BoxGeometry();
-const box11f = new THREE.Mesh(boxelevenf, originalMaterial);
-box11f.position.set( -1.5, +1.5, -0.5 );
-scene.add(box11f);
-
-const boxtwelvef = new THREE.BoxGeometry();
-const box12f = new THREE.Mesh(boxtwelvef, originalMaterial);
-box12f.position.set( -1.5, +1.5, +0.5 );
-scene.add(box12f);
 
 // header box
 const boxGeometryh = new THREE.BoxGeometry();
 const boxh = new THREE.Mesh(boxGeometryh,originalMaterial);
-boxh.position.set( -1.5, +2.5, +1.5 );
+boxh.position.set( -1, +3.5, +1 );
 scene.add(boxh)
 
 const boxtwoh = new THREE.BoxGeometry();
 const box2h = new THREE.Mesh(boxtwoh, originalMaterial);
-box2h.position.set( -0.5, +2.5, +1.5 );
+box2h.position.set( 0, +3.5, +1 );
 scene.add(box2h);
 
 const boxthreeh = new THREE.BoxGeometry();
 const box3h = new THREE.Mesh(boxthreeh, originalMaterial);
-box3h.position.set( +0.5, +2.5, +1.5 );
+box3h.position.set( +1, +3.5, +1 );
 scene.add(box3h);
 
 const boxfourh = new THREE.BoxGeometry();
 const box4h = new THREE.Mesh(boxfourh, originalMaterial);
-box4h.position.set( +1.5, +2.5, +1.5 );
+box4h.position.set( +1, +3.5, -1 );
 scene.add(box4h);
 
 const boxfiveh = new THREE.BoxGeometry();
-const box5h = new THREE.Mesh(boxfiveh, originalMaterial);
-box5h.position.set( +1.5, +2.5, +0.5 );
+const box5h = new THREE.Mesh( boxfiveh, originalMaterial );
+box5h.position.set( +1, +3.5, 0 );
 scene.add(box5h);
 
 const boxsixh = new THREE.BoxGeometry();
-const box6h = new THREE.Mesh(boxsixh, originalMaterial);
-box6h.position.set( +1.5, +2.5, -0.5 );
+const box6h = new THREE.Mesh( boxsixh, originalMaterial );
+box6h.position.set( 0, +3.5, 0 );
 scene.add(box6h);
 
 const boxsevenh = new THREE.BoxGeometry();
-const box7h = new THREE.Mesh(boxsevenh, originalMaterial);
-box7h.position.set( +1.5, +2.5, -1.5 );
+const box7h = new THREE.Mesh( boxsevenh, originalMaterial );
+box7h.position.set( -1, +3.5, 0 );
 scene.add(box7h);
 
 const boxeighth = new THREE.BoxGeometry();
-const box8h = new THREE.Mesh(boxeighth, originalMaterial);
-box8h.position.set( +0.5, +2.5, -1.5 );
+const box8h = new THREE.Mesh( boxeighth, originalMaterial );
+box8h.position.set( -1, +3.5, -1 );
 scene.add(box8h);
 
 const boxnineh = new THREE.BoxGeometry();
-const box9h = new THREE.Mesh(boxnineh, originalMaterial);
-box9h.position.set( -0.5, +2.5, -1.5 );
+const box9h = new THREE.Mesh( boxnineh, originalMaterial );
+box9h.position.set( 0, +3.5, -1 );
 scene.add(box9h);
 
-const boxtenh = new THREE.BoxGeometry();
-const box10h = new THREE.Mesh(boxtenh, originalMaterial);
-box10h.position.set( -1.5, +2.5, -1.5 );
-scene.add(box10h);
+let lock = false;
 
-const boxelevenh = new THREE.BoxGeometry();
-const box11h = new THREE.Mesh(boxelevenh, originalMaterial);
-box11h.position.set( -1.5, +2.5, -0.5 );
-scene.add(box11h);
+window.addEventListener("keydown", (e) => {
+    if ( e.code === "Space" && lock === false ){
+        lock = true;
+        animationBoxes();
+        setTimeout( () => {
+            lock = false;
+        }, 6000);
+    }   
+})
 
-const boxtwelveh = new THREE.BoxGeometry();
-const box12h = new THREE.Mesh(boxtwelveh, originalMaterial);
-box12h.position.set( -1.5, +2.5, +0.5 );
-scene.add(box12h);
+function animationBoxes(){
+    function animationOne(){
+        if (animationOne){
+        gsap.to(box.position, {
+            y: 4.5,
+            duration: 0.2,
+            ease: "power1.in",
+            delay: 1,
+        })
+        gsap.to(box2h.position, {
+            y: 4.5,
+            duration: 0.2,
+            ease: "power1.in",
+        })
+        gsap.to(boxh.position, {
+            x: 0,
+            duration: 0.2,
+            ease: "power1.in",
+            delay: 0.5
+        })
+        gsap.to(boxf.position, {
+            x: -2,
+            duration: 0.2,
+            ease: "power1.in",
+        })
+        gsap.to(box2f.position, {
+            z: 0,
+            duration: 0.2,
+            ease: "power1.in",
+            delay: 0.5
+        })
+        gsap.to(box2.position, {
+            y: 2.5,
+            duration: 0.2,
+            ease: "power1.in",
+            delay: 1
+        })
+        gsap.to(box3.position, {
+            x: -1,
+            duration: 0.2,
+            ease: "power2.in",
+            delay: 1.5
+        })
+        gsap.to(box3f.position, {
+            y: 1.5,
+            duration: 0.2,
+            ease: "power2.in",
+            delay: 2
+        })
+        gsap.to(box8f.position, {
+            z: 1,
+            duration: 0.2,
+            ease: "power2.in",
+            delay: 2
+        })
+        gsap.to(box8.position, {
+            y: +0.5,
+            duration: 0.2,
+            ease: "power2.in",
+            delay: 1
+        })
+        gsap.to(box7.position, {
+            z: 1,
+            duration: 0.2,
+            ease: "power2.in",
+            delay: 1
+        })
+        gsap.to(box7.position, {
+            x: -2,
+            duration: 0.2,
+            ease: "power2.in",
+            delay: 1.5
+        })
+        gsap.to(box2.position, {
+            y: 1.5,
+            duration: 0.2,
+            ease: "power2.in",
+            delay: 2
+        })
+        gsap.to(box3h.position, {
+            y: 2.5,
+            duration: 0.2,
+            ease: "power2.in",
+            delay: 2.5
+        })
+        gsap.to(boxf.position, {
+            y: 3.5,
+            duration: 0.2,
+            ease: "power2.in",
+            delay: 2.5
+        })
+        gsap.to(boxh.position, {
+            x: 1,
+            duration: 0.2,
+            ease: "power2.in",
+            delay: 3
+        })
+        gsap.to(box3.position, {
+            z: 0,
+            duration: 0.2,
+            ease: "power2.in",
+            delay: 3
+        })
+        gsap.to(box7.position, {
+            x: -1,
+            duration: 0.2,
+            ease: "power2.in",
+            delay: 3.5
+        })
+        gsap.to(box3.position, {
+            y: 2.5,
+            duration: 0.2,
+            ease: "power2.in",
+            delay: 3.5
+        })
+        gsap.to(box8.position, {
+            y: 1.5,
+            duration: 0.2,
+            ease: "power2.in",
+            delay: 3.5
+        })
+        gsap.to(box7.position, {
+            z: 0,
+            duration: 0.2,
+            ease: "power2.in",
+            delay: 4
+        })
+        gsap.to(box8.position, {
+            z: -1,
+            duration: 0.2,
+            ease: "power2.in",
+            delay: 4
+        })
+        gsap.to(box2h.position, {
+            y: 3.5,
+            duration: 0.2,
+            ease: "power2.in",
+            delay: 4
+        })
+        gsap.to(box2f.position, {
+            z: 1,
+            duration: 0.2,
+            ease: "power2.in",
+            delay: 4
+        })
+        gsap.to(boxf.position, {
+            x: -1,
+            duration: 0.2,
+            ease: "power2.in",
+            delay: 4.5
+        })
+        gsap.to(boxf.position, {
+            y: 2.5,
+            duration: 0.2,
+            ease: "power2.in",
+            delay: 5
+        })
+        gsap.to(box.position, {
+            y: 3.5,
+            duration: 0.2,
+            ease: "power2.in",
+            delay: 5
+        })
+        gsap.to(box8f.position, {
+            y: 1.5,
+            duration: 0.2,
+            ease: "power2.in",
+            delay: 5,
+        })
+        gsap.to(box8f.position, {
+            y: 1.5,
+            duration: 0.2,
+            ease: "power2.in",
+            delay: 5.5,
+            // onComplite: animationTwo
+        })
+    }
 
-const boxthirteenh = new THREE.BoxGeometry();
-const box13h = new THREE.Mesh(boxthirteenh, originalMaterial);
-box13h.position.set( -0.5, +2.5, +0.5 );
-scene.add(box13h);
-
-const boxfourteenh = new THREE.BoxGeometry();
-const box14h = new THREE.Mesh(boxfourteenh, originalMaterial);
-box14h.position.set( +0.5, +2.5, +0.5 );
-scene.add(box14h);
-
-const boxfifteenh = new THREE.BoxGeometry();
-const box15h = new THREE.Mesh(boxfifteenh, originalMaterial);
-box15h.position.set( +0.5, +2.5, -0.5 );
-scene.add(box15h);
-
-const boxsixteenh = new THREE.BoxGeometry();
-const box16h = new THREE.Mesh(boxsixteenh, originalMaterial);
-box16h.position.set( -0.5, +2.5, -0.5 );
-scene.add(box16h);
-
-const isHover = false;
+    // function animationTwo(){
+    //     gsap.to(box.position, {
+    //         y: 4.5,
+    //         duration: 0.2,
+    //         ease: "power2.in",
+    //     })
+    //     gsap.to(boxf.position, {
+    //         y: 3.5,
+    //         duration: 0.2,
+    //         ease: "power2.in",
+    //     })
+    //     gsap.to(box8f.position, {
+    //         y: 2.5,
+    //         duration: 0.2,
+    //         ease: "power2.in",
+    //     })
+        
+    // }
+}
+    animationOne()
+}
 
 // always on animate
 function animate(){
     requestAnimationFrame(animate);
 
-    raycaster.setFromCamera(mouse, camera);
-
-    const intersects = raycaster.intersectObject( box );
-
-    if( intersects.length > 0 ){
-        if( intersects[0].object === box ){
-            box.position.set( -1.9, +0.5, +1.9 );
-            box2.position.set( -0.8, +0.5, +1.8 );
-            box3.position.set( +0.3, +0.5, +1.7 );
-            box4.position.set( +1.4, +0.5, +1.6 );
-            box10.position.set( -1.6, +0.5, -1.4 );
-            box11.position.set( -1.7, +0.5, -0.3 );
-            box12.position.set( -1.8, +0.5, +0.8 );
-            boxf.position.set( -1.8, +1.5, +1.8 );
-            box2f.position.set( -0.7, +1.5, +1.7 );
-            box3f.position.set( +0.4, +1.5, +1.6 );
-            box11f.position.set( -1.6, +1.5, -0.4 );
-            box12f.position.set( -1.7, +1.5, +0.7 );
-            boxh.position.set( -1.7, +2.5, +1.7 );
-            box2h.position.set( -0.6, +2.5, +1.6 );
-            box12h.position.set( -1.6, +2.5, +0.6 );
-
-        }
-    }
-    else{
-        box.position.set( -1.5, +0.5, +1.5 );
-        box2.position.set( -0.5, +0.5, +1.5 );
-        boxf.position.set( -1.5, +1.5, +1.5 );
-        box12.position.set( -1.5, +0.5, +0.5 );
-        box11.position.set( -1.5, +0.5, -0.5 );
-        box3.position.set( +0.5, +0.5, +1.5 );
-        boxh.position.set( -1.5, +2.5, +1.5 );
-        box2f.position.set( -0.5, +1.5, +1.5 );
-        box12f.position.set( -1.5, +1.5, +0.5 );
-        box4.position.set( +1.5, +0.5, +1.5 );
-        box10.position.set( -1.5, +0.5, -1.5 );
-        box3f.position.set( +0.5, +1.5, +1.5 );
-        box11f.position.set( -1.5, +1.5, -0.5 );
-        box2h.position.set( -0.5, +2.5, +1.5 );
-        box12h.position.set( -1.5, +2.5, +0.5 );
-        box4f.position.set( +1.5, +1.5, +1.5 );
-    }
-
-
+    controls.autoRotate = false;
+    controls.autoRotateSpeed = -2.0;
     controls.update();
     renderer.render(scene,camera);
 
