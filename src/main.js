@@ -176,11 +176,6 @@ plane.rotation.x = -Math.PI / 2;
 plane.position.y = 0;
 scene.add(plane);
 
-const gridHelper = new THREE.GridHelper( 10, 10, 0x000000, 0x000000);
-
-gridHelper.position.y = 0.01;
-scene.add(gridHelper);
-
 // figuri box
 const originalMaterial = new THREE.MeshStandardMaterial({color: 0xc0c0c0, metalness: 1.0, roughness: 0.15, envMapIntensity: 1.5});
 const updateMaterial = new THREE.MeshStandardMaterial({color: "yellow",emissive: "white", emissiveIntensity: 0.05});
