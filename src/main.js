@@ -223,7 +223,7 @@ scene.add(box7);
 
 const boxeight = new THREE.BoxGeometry();
 const box8 = new THREE.Mesh( boxeight, originalMaterial );
-box8.position.set( -1, +1.5, 0 );
+box8.position.set( -1, +1.5, 0 ); //
 scene.add(box8);
 
 const boxnine = new THREE.BoxGeometry();
@@ -333,201 +333,442 @@ window.addEventListener("keydown", (e) => {
 function animationBoxes(){
     function animationOne(){
         if (animationOne){
-        gsap.to(box.position, {
-            y: 4.5,
-            duration: 0.2,
-            ease: "power1.in",
-            delay: 1,
-        })
-        gsap.to(box2h.position, {
-            y: 4.5,
-            duration: 0.2,
-            ease: "power1.in",
-        })
-        gsap.to(boxh.position, {
-            x: 0,
-            duration: 0.2,
-            ease: "power1.in",
-            delay: 0.5
-        })
-        gsap.to(boxf.position, {
-            x: -2,
-            duration: 0.2,
-            ease: "power1.in",
-        })
-        gsap.to(box2f.position, {
-            z: 0,
-            duration: 0.2,
-            ease: "power1.in",
-            delay: 0.5
-        })
-        gsap.to(box2.position, {
-            y: 2.5,
-            duration: 0.2,
-            ease: "power1.in",
-            delay: 1
-        })
-        gsap.to(box3.position, {
-            x: -1,
-            duration: 0.2,
-            ease: "power2.in",
-            delay: 1.5
-        })
-        gsap.to(box3f.position, {
-            y: 1.5,
-            duration: 0.2,
-            ease: "power2.in",
-            delay: 2
-        })
-        gsap.to(box8f.position, {
-            z: 1,
-            duration: 0.2,
-            ease: "power2.in",
-            delay: 2
-        })
-        gsap.to(box8.position, {
-            y: +0.5,
-            duration: 0.2,
-            ease: "power2.in",
-            delay: 1
-        })
-        gsap.to(box7.position, {
-            z: 1,
-            duration: 0.2,
-            ease: "power2.in",
-            delay: 1
-        })
-        gsap.to(box7.position, {
-            x: -2,
-            duration: 0.2,
-            ease: "power2.in",
-            delay: 1.5
-        })
-        gsap.to(box2.position, {
-            y: 1.5,
-            duration: 0.2,
-            ease: "power2.in",
-            delay: 2
-        })
-        gsap.to(box3h.position, {
-            y: 2.5,
-            duration: 0.2,
-            ease: "power2.in",
-            delay: 2.5
-        })
-        gsap.to(boxf.position, {
-            y: 3.5,
-            duration: 0.2,
-            ease: "power2.in",
-            delay: 2.5
-        })
-        gsap.to(boxh.position, {
-            x: 1,
-            duration: 0.2,
-            ease: "power2.in",
-            delay: 3
-        })
-        gsap.to(box3.position, {
-            z: 0,
-            duration: 0.2,
-            ease: "power2.in",
-            delay: 3
-        })
-        gsap.to(box7.position, {
-            x: -1,
-            duration: 0.2,
-            ease: "power2.in",
-            delay: 3.5
-        })
-        gsap.to(box3.position, {
-            y: 2.5,
-            duration: 0.2,
-            ease: "power2.in",
-            delay: 3.5
-        })
-        gsap.to(box8.position, {
-            y: 1.5,
-            duration: 0.2,
-            ease: "power2.in",
-            delay: 3.5
-        })
-        gsap.to(box7.position, {
-            z: 0,
-            duration: 0.2,
-            ease: "power2.in",
-            delay: 4
-        })
-        gsap.to(box8.position, {
-            z: -1,
-            duration: 0.2,
-            ease: "power2.in",
-            delay: 4
-        })
-        gsap.to(box2h.position, {
-            y: 3.5,
-            duration: 0.2,
-            ease: "power2.in",
-            delay: 4
-        })
-        gsap.to(box2f.position, {
-            z: 1,
-            duration: 0.2,
-            ease: "power2.in",
-            delay: 4
-        })
-        gsap.to(boxf.position, {
-            x: -1,
-            duration: 0.2,
-            ease: "power2.in",
-            delay: 4.5
-        })
-        gsap.to(boxf.position, {
-            y: 2.5,
-            duration: 0.2,
-            ease: "power2.in",
-            delay: 5
-        })
-        gsap.to(box.position, {
-            y: 3.5,
-            duration: 0.2,
-            ease: "power2.in",
-            delay: 5
-        })
-        gsap.to(box8f.position, {
-            y: 1.5,
-            duration: 0.2,
-            ease: "power2.in",
-            delay: 5,
-        })
-        gsap.to(box8f.position, {
-            y: 1.5,
-            duration: 0.2,
-            ease: "power2.in",
-            delay: 5.5,
-            // onComplite: animationTwo
-        })
-    }
+            gsap.to(box.position, {
+                y: 4.5,
+                duration: 0.2,
+                ease: "power1.in",
+                delay: 1,
+            })
+            gsap.to(box2h.position, {
+                y: 4.5,
+                duration: 0.2,
+                ease: "power1.in",
+            })
+            gsap.to(boxh.position, {
+                x: 0,
+                duration: 0.2,
+                ease: "power1.in",
+                delay: 0.5
+            })
+            gsap.to(boxf.position, {
+                x: -2,
+                duration: 0.2,
+                ease: "power1.in",
+            })
+            gsap.to(box2f.position, {
+                z: 0,
+                duration: 0.2,
+                ease: "power1.in",
+                delay: 0.5
+            })
+            gsap.to(box2.position, {
+                y: 2.5,
+                duration: 0.2,
+                ease: "power1.in",
+                delay: 1
+            })
+            gsap.to(box3.position, {
+                x: -1,
+                duration: 0.2,
+                ease: "power2.in",
+                delay: 1.5
+            })
+            gsap.to(box3f.position, {
+                y: 1.5,
+                duration: 0.2,
+                ease: "power2.in",
+                delay: 2
+            })
+            gsap.to(box8f.position, {
+                z: 1,
+                duration: 0.2,
+                ease: "power2.in", //
+                delay: 2
+            })
+            gsap.to(box8.position, {
+                y: +0.5,
+                duration: 0.2,
+                ease: "power2.in",
+                delay: 1
+            })
+            gsap.to(box7.position, {
+                z: 1,
+                duration: 0.2,
+                ease: "power2.in",
+                delay: 1
+            })
+            gsap.to(box7.position, {
+                x: -2,
+                duration: 0.2,
+                ease: "power2.in",
+                delay: 1.5
+            })
+            gsap.to(box2.position, {
+                y: 1.5,
+                duration: 0.2,
+                ease: "power2.in",
+                delay: 2
+            })
+            gsap.to(box3h.position, {
+                y: 2.5,
+                duration: 0.2,
+                ease: "power2.in",
+                delay: 2.5
+            })
+            gsap.to(boxf.position, {
+                y: 3.5,
+                duration: 0.2,
+                ease: "power2.in",
+                delay: 2.5
+            })
+            gsap.to(boxh.position, {
+                x: 1,
+                duration: 0.2,
+                ease: "power2.in",
+                delay: 3
+            })
+            gsap.to(box3.position, {
+                z: 0,
+                duration: 0.2,
+                ease: "power2.in",
+                delay: 3
+            })
+            gsap.to(box7.position, {
+                x: -1,
+                duration: 0.2,
+                ease: "power2.in",
+                delay: 3.5
+            })
+            gsap.to(box3.position, {
+                y: 2.5,
+                duration: 0.2,
+                ease: "power2.in",
+                delay: 3.5
+            })
+            gsap.to(box8.position, {
+                y: 1.5,
+                duration: 0.2,
+                ease: "power2.in",
+                delay: 3.5
+            })
+            gsap.to(box7.position, {
+                z: 0,
+                duration: 0.2,
+                ease: "power2.in",
+                delay: 4
+            })
+            gsap.to(box8.position, {
+                z: -1,
+                duration: 0.2,
+                ease: "power2.in",
+                delay: 4
+            })
+            gsap.to(box2h.position, {
+                y: 3.5,
+                duration: 0.2,
+                ease: "power2.in",
+                delay: 4
+            })
+            gsap.to(box2f.position, {
+                z: 1,
+                duration: 0.2,
+                ease: "power2.in",
+                delay: 4
+            })
+            gsap.to(boxf.position, {
+                x: -1,
+                duration: 0.2,
+                ease: "power2.in",
+                delay: 4.5
+            })
+            gsap.to(boxf.position, {
+                y: 2.5,
+                duration: 0.2,
+                ease: "power2.in",
+                delay: 5
+            })
+            gsap.to(box.position, {
+                y: 3.5,
+                duration: 0.2,
+                ease: "power2.in",
+                delay: 5
+            })
+            gsap.to(box8f.position, {
+                y: 1.5,
+                duration: 0.2,
+                ease: "power2.in",
+                delay: 5,
+            })
+            gsap.to(box8f.position, {
+                y: 1.5,
+                duration: 0.2,
+                ease: "power2.in",
+                delay: 5.5,
+            })
+            gsap.to(box8h.position, {
+                y: 4,
+                x: -1.5,
+                duration: 0.2,
+                ease: "power2.in", //
+            })
+            gsap.to(box9h.position, {
+                y: 4,
+                duration: 0.2,
+                ease: "power2.in",
+            })
+            gsap.to(box4h.position, {
+                y: 4,
+                x: 1.5, 
+                duration: 0.2,
+                ease: "power2.in",
+            })
+            gsap.to(box7f.position, {
+                x: -1.5,
+                duration: 0.2,
+                ease: "power2.in",
+            })
+            gsap.to(box5f.position, {
+                x: 1.5,
+                duration: 0.2,
+                ease: "power2.in",
+            })
+            gsap.to(box5.position, {
+                x: 1.5,
+                y: 1,
+                duration: 0.2,
+                ease: "power2.in",
+            })
+            gsap.to(box6.position, {
+                y: 1,
+                duration: 0.2,
+                ease: "power2.in",
+            })
+            gsap.to(box6f.rotation, {
+                y: 1.57,
+                x: 1.57 ,
+                duration: 1,
+                ease: "power1.inOut",
+                repeat: 4
+            })
+            gsap.to(box8h.rotation, {
+                y: -1.57,
+                duration: 0.5,
+                ease: "power1.in",
+                delay: 0.5
+            })
+            gsap.to(box9h.rotation, {
+                y: -1.57,
+                duration: 0.5,
+                ease: "power1.in",
+                delay: 0.7
+            })
+            gsap.to(box4h.rotation, { 
+                y: -1.57,
+                duration: 0.5,
+                ease: "power1.in",
+                delay: 0.9
+            })
+            gsap.to(box8h.rotation, {
+                x: -1.57 ,
+                duration: 0.5,
+                ease: "power1.in",
+                delay: 1.2
+            })
+            gsap.to(box7f.rotation, {
+                x: -1.57,
+                duration: 0.5,
+                ease: "power1.in",
+                delay: 1.4,
+                repeat: 4
+            })
+            gsap.to(box5.rotation, {
+                x: 1.57,
+                duration: 0.5,
+                ease: "power1.in",
+                delay: 1
+            })
+            gsap.to(box5f.rotation, {
+                x: 1.57,
+                duration: 0.5,
+                ease: "power1.in",
+                delay: 1.2,
+            })
+            gsap.to(box4h.rotation, {
+                x: 1.57,
+                duration: 0.5,
+                ease: "power1.in",
+                delay: 1.4,
+                repeat: 2
+            })
+            gsap.to(box5f.rotation, {
+                x: -1.57,
+                duration: 1,
+                ease: "power1.inOut",
+                delay: 1.8,
+                repeat: 2
+            })
+            gsap.to(box5.rotation, {
+                x: -1.57,
+                duration: 1,
+                ease: "power1.inOut",
+                delay: 2,
+                repeat: 2
+            })
+            gsap.to(box9h.rotation, {
+                x: -1.57,
+                duration: 0.5,
+                ease: "power1.in",
+                delay: 5
+            })
+            gsap.to(box9h.position, {
+                y: 3.5,
+                duration: 0.5,
+                ease: "power1.in",
+                delay: 5
+            })
+            gsap.to(box8h.rotation, {
+                x: 1.57,
+                y: 1.57,
+                duration: 0.5,
+                ease: "power1.inOut",
+                delay: 5
+            })
+            gsap.to(box8h.position, {
+                y: 3.5,
+                x: -1,
+                duration: 0.5,
+                ease: "power1.in",
+                delay: 5
+            })
+            gsap.to(box4h.rotation, { 
+                y: 1.57,
+                x: 1.57,
+                duration: 0.5,
+                ease: "power1.inOut",
+                delay: 5  
+            })
+            gsap.to(box4h.position, { 
+                y: 3.5,
+                x: 1, 
+                duration: 0.5,
+                ease: "power1.in",
+                delay: 5 
+            })
+            gsap.to(box5f.rotation, {
+                z : 1.57 ,
+                duration: 0.5,
+                ease: "power1.inOut",
+                delay: 5,
+            })
+            gsap.to(box5f.position , {
+                x: 1,
+                duration: 0.5,
+                ease: "power1.inOut",
+                delay: 5,
+            })
+            gsap.to(box5.rotation, {
+                z: 1.57,
+                duration: 0.5,
+                ease: "power1.inOut",
+                delay: 5,
+            })
+            gsap.to(box5.position, {
+                x: 1,
+                y: 1.5,
+                duration: 0.5,
+                ease: "power1.inOut",
+                delay: 5,
+            })
+            gsap.to(box5.rotation, {
+                x: 1.57,
+                y: 1.57,
+                duration: 0.5,
+                ease: "power1.inOut",
+                delay: 5,
+            })
+            gsap.to(box5.position, {
+                x: 1,
+                y: 1.5,
+                duration: 0.5,
+                ease: "power1.inOut",
+                delay: 5,
+            })
+            gsap.to(box6 .rotation, {
+                x:  1.57,
+                duration: 0.5,
+                ease: "power1.inOut",
+                delay: 5,
+            })
+            gsap.to(box6.position, {
+                y: 1.5,
+                duration: 0.5,
+                ease: "power1.inOut",
+                delay: 5,
+            })
+            gsap.to(box7f.rotation, {
+                z: -1.57,
+                duration: 0.5,
+                ease: "power1.inOut",
+                delay: 5
+            })
+            gsap.to(box7f.position, {
+                y: 2.5,
+                x: -1,
+                duration: 0.5,
+                ease: "power1.inOut",
+                delay: 5,
+            })
+            gsap.to(box7f.position, {
+                onComplite: animationTwo,
+                delay: 0.5
+            })
 
-    // function animationTwo(){
-    //     gsap.to(box.position, {
-    //         y: 4.5,
-    //         duration: 0.2,
-    //         ease: "power2.in",
-    //     })
-    //     gsap.to(boxf.position, {
-    //         y: 3.5,
-    //         duration: 0.2,
-    //         ease: "power2.in",
-    //     })
-    //     gsap.to(box8f.position, {
-    //         y: 2.5,
-    //         duration: 0.2,
-    //         ease: "power2.in",
-    //     })
+        }
+        function animationTwo(){
+        gsap.to(box.position, { x: -1, y: 1.5, z: 1, duration: 0.5, delay: 5.5 });
+        gsap.to(box2.position, { x: 0, y: 1.5, z: 1, duration: 0.5, delay: 5.5 });
+        gsap.to(box3.position, { x: 1, y: 1.5, z: 1, duration: 0.5, delay: 5.5 });
+        gsap.to(box4.position, { x: 1, y: 1.5, z: 0, duration: 0.5, delay: 5.5 });
+        gsap.to(box5.position, { x: 1, y: 1.5, z: -1, duration: 0.5, delay: 5.5 });
+        gsap.to(box6.position, { x: 0, y: 1.5, z: -1, duration: 0.5, delay: 5.5 });
+        gsap.to(box7.position, { x: -1, y: 1.5, z: -1, duration: 0.5, delay: 5.5 });
+        gsap.to(box8.position, { x: -1, y: 1.5, z: 0, duration: 0.5, delay: 5.5 });
+        gsap.to(box9.position, { x: 0, y: 1.5, z: 0, duration: 0.5, delay: 5.5 });
         
-    // }
-}
-    animationOne()
+        // Middle layer
+        gsap.to(boxf.position, { x: -1, y: 2.5, z: 1, duration: 0.5, delay: 5.5 });
+        gsap.to(box2f.position, { x: 0, y: 2.5, z: 1, duration: 0.5, delay: 5.5 });
+        gsap.to(box3f.position, { x: 1, y: 2.5, z: 1, duration: 0.5, delay: 5.5 });
+        gsap.to(box4f.position, { x: 1, y: 2.5, z: 0, duration: 0.5, delay: 5.5 });
+        gsap.to(box5f.position, { x: 1, y: 2.5, z: -1, duration: 0.5, delay: 5.5 });
+        gsap.to(box6f.position, { x: 0, y: 2.5, z: -1, duration: 0.5, delay: 5.5 });
+        gsap.to(box7f.position, { x: -1, y: 2.5, z: -1, duration: 0.5, delay: 5.5 });
+        gsap.to(box8f.position, { x: -1, y: 2.5, z: 0, duration: 0.5, delay: 5.5 });
+        
+        // Top layer
+        gsap.to(boxh.position, { x: -1, y: 3.5, z: 1, duration: 0.5, delay: 5.5 });
+        gsap.to(box2h.position, { x: 0, y: 3.5, z: 1, duration: 0.5, delay: 5.5 });
+        gsap.to(box3h.position, { x: 1, y: 3.5, z: 1, duration: 0.5, delay: 5.5 });
+        gsap.to(box4h.position, { x: 1, y: 3.5, z: -1, duration: 0.5, delay: 5.5 });
+        gsap.to(box5h.position, { x: 1, y: 3.5, z: 0, duration: 0.5, delay: 5.5 });
+        gsap.to(box6h.position, { x: 0, y: 3.5, z: 0, duration: 0.5, delay: 5.5 });
+        gsap.to(box7h.position, { x: -1, y: 3.5, z: 0, duration: 0.5, delay: 5.5 });
+        gsap.to(box8h.position, { x: -1, y: 3.5, z: -1, duration: 0.5, delay: 5.5 });
+        gsap.to(box9h.position, { x: 0, y: 3.5, z: -1, duration: 0.5, delay: 5.5 });
+        
+        // Rotationlarni ham qaytarish
+        gsap.to(box5.rotation, { x: 0, y: 0, z: 0, duration: 0.5, delay: 5.5 });
+        gsap.to(box5f.rotation, { x: 0, y: 0, z: 0, duration: 0.5, delay: 5.5 });
+        gsap.to(box6.rotation, { x: 0, y: 0, z: 0, duration: 0.5, delay: 5.5 });
+        gsap.to(box6f.rotation, { x: 0, y: 0, z: 0, duration: 0.5, delay: 5.5 });
+        gsap.to(box7f.rotation, { x: 0, y: 0, z: 0, duration: 0.5, delay: 5.5 });
+        gsap.to(box4h.rotation, { x: 0, y: 0, z: 0, duration: 0.5, delay: 5.5 });
+        gsap.to(box8h.rotation, { x: 0, y: 0, z: 0, duration: 0.5, delay: 5.5 });
+        gsap.to(box9h.rotation, { x: 0, y: 0, z: 0, duration: 0.5, delay: 5.5 });
+
+        }
+
+    }    animationOne()
 }
 
 // always on animate
