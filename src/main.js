@@ -315,15 +315,20 @@ scene.add(box9h);
 
 let lock = false;
 
-window.addEventListener("keydown", (e) => {
-    if ( e.code === "Space" && lock === false ){
-        lock = true;
-        animationBoxes();
-        setTimeout( () => {
-            lock = false;
-        }, 6000);
-    }   
-})
+function startAnim(){
+    if(lock) return;
+    lock = true;
+    animationBoxes();
+    setTimeout(() => lock = false, 6000);
+}
+
+window.addEventListener("keydown", e => {
+    if( e.code === "Space"){
+        startAnim();
+    }
+});
+
+window.addEventListener("touchstart", startAnim);
 
 function animationBoxes(){
     function animationOne(){
