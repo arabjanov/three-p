@@ -319,7 +319,7 @@ function startAnim(){
     if(lock) return;
     lock = true;
     animationBoxes();
-    setTimeout(() => lock = false, 6000);
+    setTimeout(() => lock = false, 7000);
 }
 
 window.addEventListener("keydown", e => {
